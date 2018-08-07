@@ -1,0 +1,49 @@
+2018-08-04 10:40:20 ERROR  : Error connecting to the server: could not translate host name "local" to address: Unknown host
+
+2018-08-04 10:40:39 ERROR  : ERROR:  function pg_last_xlog_receive_location() does not exist
+LINE 1: ...E NULL END as inrecovery, CASE WHEN usesuper THEN pg_last_xl...
+                                                             ^
+HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+2018-08-04 10:40:42 ERROR  : Column not found in pgSet: usecreatedb
+2018-08-04 10:40:43 ERROR  : Column not found in pgSet: usesuper
+2018-08-04 10:40:44 ERROR  : Column not found in pgSet: upsince
+2018-08-04 10:40:44 ERROR  : Column not found in pgSet: confloadedsince
+2018-08-04 10:40:45 ERROR  : Column not found in pgSet: inrecovery
+2018-08-04 10:40:46 ERROR  : Column not found in pgSet: replayloc
+2018-08-04 10:40:46 ERROR  : Column not found in pgSet: receiveloc
+2018-08-04 10:40:46 ERROR  : Column not found in pgSet: replay_timestamp
+2018-08-04 10:40:46 ERROR  : Column not found in pgSet: isreplaypaused
+2018-08-04 10:46:48 ERROR  : ERROR:  column "amgettuple" does not exist
+LINE 1: ..._am WHERE EXISTS (SELECT 1 FROM pg_proc WHERE oid=amgettuple...
+                                                             ^
+2018-08-04 10:46:54 ERROR  : ERROR:  syntax error at or near "AND"
+LINE 1: SELECT opcname FROM pg_opclass WHERE opcmethod= AND NOT opcd...
+                                                        ^
+2018-08-04 10:50:14 ERROR  : ERROR:  column "AUD" does not exist
+LINE 3:     VALUES ("AUD", "04.08.2018", 46,7092);
+                    ^
+2018-08-04 10:50:21 ERROR  : ERROR:  column "04.08.2018" does not exist
+LINE 3:     VALUES ('AUD', "04.08.2018", 46,7092);
+                           ^
+2018-08-04 10:50:28 ERROR  : ERROR:  INSERT has more expressions than target columns
+LINE 3:     VALUES ('AUD', '04.08.2018', 46,7092);
+                                            ^
+2018-08-04 10:51:57 ERROR  : ERROR:  duplicate key value violates unique constraint "Valute_pkey"
+DETAIL:  Key ("Date", "Name")=(2018-04-08, AUD) already exists.
+2018-08-04 10:52:09 ERROR  : ERROR:  duplicate key value violates unique constraint "Valute_pkey"
+DETAIL:  Key ("Date", "Name")=(2018-04-08, AUD) already exists.
+2018-08-04 10:54:10 ERROR  : ERROR:  duplicate key value violates unique constraint "Valute_pkey"
+DETAIL:  Key ("Date", "Name")=(2018-04-08, AUDI) already exists.
+2018-08-06 19:30:38 ERROR  : ERROR:  function pg_last_xlog_receive_location() does not exist
+LINE 1: ...E NULL END as inrecovery, CASE WHEN usesuper THEN pg_last_xl...
+                                                             ^
+HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+2018-08-06 19:30:40 ERROR  : Column not found in pgSet: usecreatedb
+2018-08-06 19:30:41 ERROR  : Column not found in pgSet: usesuper
+2018-08-06 19:30:41 ERROR  : Column not found in pgSet: upsince
+2018-08-06 19:30:41 ERROR  : Column not found in pgSet: confloadedsince
+2018-08-06 19:30:42 ERROR  : Column not found in pgSet: inrecovery
+2018-08-06 19:30:42 ERROR  : Column not found in pgSet: replayloc
+2018-08-06 19:30:43 ERROR  : Column not found in pgSet: receiveloc
+2018-08-06 19:30:43 ERROR  : Column not found in pgSet: replay_timestamp
+2018-08-06 19:30:43 ERROR  : Column not found in pgSet: isreplaypaused

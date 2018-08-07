@@ -1,0 +1,57 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2047
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{78F15054-70C1-4D4D-8CB5-C9A6E347AE70}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BL", "BL", "{094CC075-2087-43FE-ADF5-AE957E55BAE9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Storages", "Storages", "{89CB37F8-59D7-4A68-91EE-19A28894E862}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Interfaces", "Interfaces", "{484B9035-BEAD-4A29-8E1D-1E9CD8A3DABC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExchangeRates.BL", "BL\ExchangeRates.BL\ExchangeRates.BL.csproj", "{F8F0F277-CD27-416C-AAF2-BBAFF1B1F355}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExchangeRates.Service", "Services\ExchangeRates.Service\ExchangeRates.Service.csproj", "{16D7AE22-F746-4F5C-8F25-FB6905DC257F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExchangeRates.Storage", "Storages\ExchangeRates.Storage\ExchangeRates.Storage.csproj", "{D564D9C2-673C-41E6-8323-E93F7E9566A2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExchangeRates.Interfaces", "Interfaces\ExchangeRates.Interfaces\ExchangeRates.Interfaces.csproj", "{B8550277-56B0-4DCE-B116-9E24979E394D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F8F0F277-CD27-416C-AAF2-BBAFF1B1F355}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8F0F277-CD27-416C-AAF2-BBAFF1B1F355}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F8F0F277-CD27-416C-AAF2-BBAFF1B1F355}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8F0F277-CD27-416C-AAF2-BBAFF1B1F355}.Release|Any CPU.Build.0 = Release|Any CPU
+		{16D7AE22-F746-4F5C-8F25-FB6905DC257F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{16D7AE22-F746-4F5C-8F25-FB6905DC257F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{16D7AE22-F746-4F5C-8F25-FB6905DC257F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{16D7AE22-F746-4F5C-8F25-FB6905DC257F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D564D9C2-673C-41E6-8323-E93F7E9566A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D564D9C2-673C-41E6-8323-E93F7E9566A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D564D9C2-673C-41E6-8323-E93F7E9566A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D564D9C2-673C-41E6-8323-E93F7E9566A2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B8550277-56B0-4DCE-B116-9E24979E394D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8550277-56B0-4DCE-B116-9E24979E394D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8550277-56B0-4DCE-B116-9E24979E394D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8550277-56B0-4DCE-B116-9E24979E394D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F8F0F277-CD27-416C-AAF2-BBAFF1B1F355} = {094CC075-2087-43FE-ADF5-AE957E55BAE9}
+		{16D7AE22-F746-4F5C-8F25-FB6905DC257F} = {78F15054-70C1-4D4D-8CB5-C9A6E347AE70}
+		{D564D9C2-673C-41E6-8323-E93F7E9566A2} = {89CB37F8-59D7-4A68-91EE-19A28894E862}
+		{B8550277-56B0-4DCE-B116-9E24979E394D} = {484B9035-BEAD-4A29-8E1D-1E9CD8A3DABC}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1FB9079E-FEFF-4A0C-A981-C825AC600772}
+	EndGlobalSection
+EndGlobal

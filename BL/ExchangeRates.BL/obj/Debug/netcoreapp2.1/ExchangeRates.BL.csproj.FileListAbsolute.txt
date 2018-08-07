@@ -1,0 +1,14 @@
+C:\Users\vszenin.MAINDOMAIN\Documents\Visual Studio 2017\Projects2\ExchangeRatesService\BL\ExchangeRates.BL\bin\Debug\netcoreapp2.1\ExchangeRates.BL.deps.json
+C:\Users\vszenin.MAINDOMAIN\Documents\Visual Studio 2017\Projects2\ExchangeRatesService\BL\ExchangeRates.BL\bin\Debug\netcoreapp2.1\ExchangeRates.BL.dll
+C:\Users\vszenin.MAINDOMAIN\Documents\Visual Studio 2017\Projects2\ExchangeRatesService\BL\ExchangeRates.BL\bin\Debug\netcoreapp2.1\ExchangeRates.BL.pdb
+C:\Users\vszenin.MAINDOMAIN\Documents\Visual Studio 2017\Projects2\ExchangeRatesService\BL\ExchangeRates.BL\bin\Debug\netcoreapp2.1\ExchangeRates.Interfaces.dll
+C:\Users\vszenin.MAINDOMAIN\Documents\Visual Studio 2017\Projects2\ExchangeRatesService\BL\ExchangeRates.BL\bin\Debug\netcoreapp2.1\ExchangeRates.Interfaces.pdb
+C:\Users\vszenin.MAINDOMAIN\Documents\Visual Studio 2017\Projects2\ExchangeRatesService\BL\ExchangeRates.BL\obj\Debug\netcoreapp2.1\ExchangeRates.BL.csprojAssemblyReference.cache
+C:\Users\vszenin.MAINDOMAIN\Documents\Visual Studio 2017\Projects2\ExchangeRatesService\BL\ExchangeRates.BL\obj\Debug\netcoreapp2.1\ExchangeRates.BL.csproj.CoreCompileInputs.cache
+C:\Users\vszenin.MAINDOMAIN\Documents\Visual Studio 2017\Projects2\ExchangeRatesService\BL\ExchangeRates.BL\obj\Debug\netcoreapp2.1\ExchangeRates.BL.AssemblyInfoInputs.cache
+C:\Users\vszenin.MAINDOMAIN\Documents\Visual Studio 2017\Projects2\ExchangeRatesService\BL\ExchangeRates.BL\obj\Debug\netcoreapp2.1\ExchangeRates.BL.AssemblyInfo.cs
+C:\Users\vszenin.MAINDOMAIN\Documents\Visual Studio 2017\Projects2\ExchangeRatesService\BL\ExchangeRates.BL\obj\Debug\netcoreapp2.1\ExchangeRates.BL.csproj.CopyComplete
+C:\Users\vszenin.MAINDOMAIN\Documents\Visual Studio 2017\Projects2\ExchangeRatesService\BL\ExchangeRates.BL\obj\Debug\netcoreapp2.1\ExchangeRates.BL.dll
+C:\Users\vszenin.MAINDOMAIN\Documents\Visual Studio 2017\Projects2\ExchangeRatesService\BL\ExchangeRates.BL\obj\Debug\netcoreapp2.1\ExchangeRates.BL.pdb
+C:\Users\vszenin.MAINDOMAIN\Documents\Visual Studio 2017\Projects2\ExchangeRatesService\BL\ExchangeRates.BL\obj\Debug\netcoreapp2.1\ExchangeRates.BL.Properties.Resources.resources
+C:\Users\vszenin.MAINDOMAIN\Documents\Visual Studio 2017\Projects2\ExchangeRatesService\BL\ExchangeRates.BL\obj\Debug\netcoreapp2.1\ExchangeRates.BL.csproj.GenerateResource.cache

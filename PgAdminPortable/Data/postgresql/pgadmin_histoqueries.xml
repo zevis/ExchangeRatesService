@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<histoqueries>
+ <histoquery>SELECT &quot;Name&quot;, &quot;Date&quot;, &quot;Rate&quot;
+  FROM public.&quot;Valute&quot;;
+</histoquery>
+ <histoquery>SELECT &quot;Name&quot;, &quot;Date&quot;, &quot;Rate&quot;
+  FROM public.&quot;Valute&quot;&#13;
+  WHERE &quot;Name&quot; = 'AUD' AND &quot;Date&quot; = '2018.04.08'
+</histoquery>
+</histoqueries>

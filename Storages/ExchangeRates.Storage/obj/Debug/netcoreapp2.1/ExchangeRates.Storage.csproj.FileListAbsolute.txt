@@ -1,0 +1,12 @@
+C:\Users\vszenin.MAINDOMAIN\Documents\Visual Studio 2017\Projects2\ExchangeRatesService\Storages\ExchangeRates.Storage\bin\Debug\netcoreapp2.1\ExchangeRates.Interfaces.dll
+C:\Users\vszenin.MAINDOMAIN\Documents\Visual Studio 2017\Projects2\ExchangeRatesService\Storages\ExchangeRates.Storage\obj\Debug\netcoreapp2.1\ExchangeRates.Storage.csprojAssemblyReference.cache
+C:\Users\vszenin.MAINDOMAIN\Documents\Visual Studio 2017\Projects2\ExchangeRatesService\Storages\ExchangeRates.Storage\obj\Debug\netcoreapp2.1\ExchangeRates.Storage.csproj.CoreCompileInputs.cache
+C:\Users\vszenin.MAINDOMAIN\Documents\Visual Studio 2017\Projects2\ExchangeRatesService\Storages\ExchangeRates.Storage\obj\Debug\netcoreapp2.1\ExchangeRates.Storage.AssemblyInfoInputs.cache
+C:\Users\vszenin.MAINDOMAIN\Documents\Visual Studio 2017\Projects2\ExchangeRatesService\Storages\ExchangeRates.Storage\obj\Debug\netcoreapp2.1\ExchangeRates.Storage.AssemblyInfo.cs
+C:\Users\vszenin.MAINDOMAIN\Documents\Visual Studio 2017\Projects2\ExchangeRatesService\Storages\ExchangeRates.Storage\bin\Debug\netcoreapp2.1\ExchangeRates.Storage.deps.json
+C:\Users\vszenin.MAINDOMAIN\Documents\Visual Studio 2017\Projects2\ExchangeRatesService\Storages\ExchangeRates.Storage\bin\Debug\netcoreapp2.1\ExchangeRates.Storage.dll
+C:\Users\vszenin.MAINDOMAIN\Documents\Visual Studio 2017\Projects2\ExchangeRatesService\Storages\ExchangeRates.Storage\bin\Debug\netcoreapp2.1\ExchangeRates.Storage.pdb
+C:\Users\vszenin.MAINDOMAIN\Documents\Visual Studio 2017\Projects2\ExchangeRatesService\Storages\ExchangeRates.Storage\bin\Debug\netcoreapp2.1\ExchangeRates.Interfaces.pdb
+C:\Users\vszenin.MAINDOMAIN\Documents\Visual Studio 2017\Projects2\ExchangeRatesService\Storages\ExchangeRates.Storage\obj\Debug\netcoreapp2.1\ExchangeRates.Storage.csproj.CopyComplete
+C:\Users\vszenin.MAINDOMAIN\Documents\Visual Studio 2017\Projects2\ExchangeRatesService\Storages\ExchangeRates.Storage\obj\Debug\netcoreapp2.1\ExchangeRates.Storage.dll
+C:\Users\vszenin.MAINDOMAIN\Documents\Visual Studio 2017\Projects2\ExchangeRatesService\Storages\ExchangeRates.Storage\obj\Debug\netcoreapp2.1\ExchangeRates.Storage.pdb
