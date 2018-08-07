@@ -58,6 +58,7 @@ namespace ExchangeRates.Storage
                     }
                     catch (PostgresException e)
                     {
+                        // Код ошибки дубликата ключа, значит уже закешировано.
                         if (string.Equals(e.Code, "23505"))
                             continue;
 
