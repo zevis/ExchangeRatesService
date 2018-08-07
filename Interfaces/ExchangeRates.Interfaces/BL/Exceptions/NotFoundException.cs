@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ExchangeRates.Interfaces.BL
+namespace ExchangeRates.Interfaces.BL.Exceptions
 {
     public class NotFoundException : Exception
     {

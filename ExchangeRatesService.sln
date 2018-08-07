@@ -11,9 +11,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Storages", "Storages", "{89
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Interfaces", "Interfaces", "{484B9035-BEAD-4A29-8E1D-1E9CD8A3DABC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExchangeRates.BL", "BL\ExchangeRates.BL\ExchangeRates.BL.csproj", "{F8F0F277-CD27-416C-AAF2-BBAFF1B1F355}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExchangeRates.BL", "BL\ExchangeRates.BL\ExchangeRates.BL.csproj", "{F8F0F277-CD27-416C-AAF2-BBAFF1B1F355}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExchangeRates.Service", "Services\ExchangeRates.Service\ExchangeRates.Service.csproj", "{16D7AE22-F746-4F5C-8F25-FB6905DC257F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExchangeRates.Service", "Services\ExchangeRates.Service\ExchangeRates.Service.csproj", "{16D7AE22-F746-4F5C-8F25-FB6905DC257F}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExchangeRates.Storage", "Storages\ExchangeRates.Storage\ExchangeRates.Storage.csproj", "{D564D9C2-673C-41E6-8323-E93F7E9566A2}"
 EndProject

@@ -40,24 +40,22 @@ namespace ExchangeRates.BL
             if (rate_date.Value.Date > DateTime.Now.Date)
                 throw new BadRequestException(Resources.FutureDateError);
 
-            if (rate_date.Value.Date != DateTime.Now.Date)
+            // Исхожу из того, что курсы не изменяется, никакой инвалидации не делалось.
+            try
             {
-                try
-                {
-                    double? rate = await _ratesStorage.SelectValuteRateAsync(valute_code, (DateTime)rate_date);
-                    if (rate != null)
-                        return (double)rate;
-                }
-                catch (Exception e)
-                {
-                    _logger.Debug(e.Message);
-                }
+                double? rate = await _ratesStorage.SelectValuteRateAsync(valute_code, (DateTime) rate_date);
+                if (rate != null)
+                    return (double) rate;
+            }
+            catch (Exception e)
+            {
+                _logger.Debug(e.Message);
             }
 
             List<ValuteRateOnDate> rates;
             try
             {
-                rates = await _ratesSource.GetValuteRatesOnDatesAsync((DateTime)rate_date);
+                rates = await _ratesSource.GetValuteRatesOnDatesAsync((DateTime) rate_date);
                 if (rate_date.Value.Date != DateTime.Now.Date)
                     _ratesCacher.AddValuteRatesOnDate(rates);
 
