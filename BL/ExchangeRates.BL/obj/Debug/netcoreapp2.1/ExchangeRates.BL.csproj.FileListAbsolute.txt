@@ -12,3 +12,17 @@ C:\Users\vszenin.MAINDOMAIN\Documents\Visual Studio 2017\Projects2\ExchangeRates
 C:\Users\vszenin.MAINDOMAIN\Documents\Visual Studio 2017\Projects2\ExchangeRatesService\BL\ExchangeRates.BL\obj\Debug\netcoreapp2.1\ExchangeRates.BL.pdb
 C:\Users\vszenin.MAINDOMAIN\Documents\Visual Studio 2017\Projects2\ExchangeRatesService\BL\ExchangeRates.BL\obj\Debug\netcoreapp2.1\ExchangeRates.BL.Properties.Resources.resources
 C:\Users\vszenin.MAINDOMAIN\Documents\Visual Studio 2017\Projects2\ExchangeRatesService\BL\ExchangeRates.BL\obj\Debug\netcoreapp2.1\ExchangeRates.BL.csproj.GenerateResource.cache
+C:\Git\notwork\ExchangeRatesService\BL\ExchangeRates.BL\bin\Debug\netcoreapp2.1\ExchangeRates.BL.deps.json
+C:\Git\notwork\ExchangeRatesService\BL\ExchangeRates.BL\bin\Debug\netcoreapp2.1\ExchangeRates.BL.dll
+C:\Git\notwork\ExchangeRatesService\BL\ExchangeRates.BL\bin\Debug\netcoreapp2.1\ExchangeRates.BL.pdb
+C:\Git\notwork\ExchangeRatesService\BL\ExchangeRates.BL\bin\Debug\netcoreapp2.1\ExchangeRates.Interfaces.dll
+C:\Git\notwork\ExchangeRatesService\BL\ExchangeRates.BL\bin\Debug\netcoreapp2.1\ExchangeRates.Interfaces.pdb
+C:\Git\notwork\ExchangeRatesService\BL\ExchangeRates.BL\obj\Debug\netcoreapp2.1\ExchangeRates.BL.csprojAssemblyReference.cache
+C:\Git\notwork\ExchangeRatesService\BL\ExchangeRates.BL\obj\Debug\netcoreapp2.1\ExchangeRates.BL.Properties.Resources.resources
+C:\Git\notwork\ExchangeRatesService\BL\ExchangeRates.BL\obj\Debug\netcoreapp2.1\ExchangeRates.BL.csproj.GenerateResource.cache
+C:\Git\notwork\ExchangeRatesService\BL\ExchangeRates.BL\obj\Debug\netcoreapp2.1\ExchangeRates.BL.csproj.CoreCompileInputs.cache
+C:\Git\notwork\ExchangeRatesService\BL\ExchangeRates.BL\obj\Debug\netcoreapp2.1\ExchangeRates.BL.AssemblyInfoInputs.cache
+C:\Git\notwork\ExchangeRatesService\BL\ExchangeRates.BL\obj\Debug\netcoreapp2.1\ExchangeRates.BL.AssemblyInfo.cs
+C:\Git\notwork\ExchangeRatesService\BL\ExchangeRates.BL\obj\Debug\netcoreapp2.1\ExchangeRates.BL.csproj.CopyComplete
+C:\Git\notwork\ExchangeRatesService\BL\ExchangeRates.BL\obj\Debug\netcoreapp2.1\ExchangeRates.BL.dll
+C:\Git\notwork\ExchangeRatesService\BL\ExchangeRates.BL\obj\Debug\netcoreapp2.1\ExchangeRates.BL.pdb

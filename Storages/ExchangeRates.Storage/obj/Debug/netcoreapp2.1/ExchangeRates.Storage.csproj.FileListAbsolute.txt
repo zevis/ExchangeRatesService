@@ -10,3 +10,17 @@ C:\Users\vszenin.MAINDOMAIN\Documents\Visual Studio 2017\Projects2\ExchangeRates
 C:\Users\vszenin.MAINDOMAIN\Documents\Visual Studio 2017\Projects2\ExchangeRatesService\Storages\ExchangeRates.Storage\obj\Debug\netcoreapp2.1\ExchangeRates.Storage.csproj.CopyComplete
 C:\Users\vszenin.MAINDOMAIN\Documents\Visual Studio 2017\Projects2\ExchangeRatesService\Storages\ExchangeRates.Storage\obj\Debug\netcoreapp2.1\ExchangeRates.Storage.dll
 C:\Users\vszenin.MAINDOMAIN\Documents\Visual Studio 2017\Projects2\ExchangeRatesService\Storages\ExchangeRates.Storage\obj\Debug\netcoreapp2.1\ExchangeRates.Storage.pdb
+C:\Git\notwork\ExchangeRatesService\Storages\ExchangeRates.Storage\bin\Debug\netcoreapp2.1\ExchangeRates.Storage.deps.json
+C:\Git\notwork\ExchangeRatesService\Storages\ExchangeRates.Storage\bin\Debug\netcoreapp2.1\ExchangeRates.Storage.dll
+C:\Git\notwork\ExchangeRatesService\Storages\ExchangeRates.Storage\bin\Debug\netcoreapp2.1\ExchangeRates.Storage.pdb
+C:\Git\notwork\ExchangeRatesService\Storages\ExchangeRates.Storage\bin\Debug\netcoreapp2.1\ExchangeRates.Interfaces.dll
+C:\Git\notwork\ExchangeRatesService\Storages\ExchangeRates.Storage\bin\Debug\netcoreapp2.1\ExchangeRates.Interfaces.pdb
+C:\Git\notwork\ExchangeRatesService\Storages\ExchangeRates.Storage\obj\Debug\netcoreapp2.1\ExchangeRates.Storage.csprojAssemblyReference.cache
+C:\Git\notwork\ExchangeRatesService\Storages\ExchangeRates.Storage\obj\Debug\netcoreapp2.1\ExchangeRates.Storage.csproj.CoreCompileInputs.cache
+C:\Git\notwork\ExchangeRatesService\Storages\ExchangeRates.Storage\obj\Debug\netcoreapp2.1\ExchangeRates.Storage.AssemblyInfoInputs.cache
+C:\Git\notwork\ExchangeRatesService\Storages\ExchangeRates.Storage\obj\Debug\netcoreapp2.1\ExchangeRates.Storage.AssemblyInfo.cs
+C:\Git\notwork\ExchangeRatesService\Storages\ExchangeRates.Storage\obj\Debug\netcoreapp2.1\ExchangeRates.Storage.csproj.CopyComplete
+C:\Git\notwork\ExchangeRatesService\Storages\ExchangeRates.Storage\obj\Debug\netcoreapp2.1\ExchangeRates.Storage.dll
+C:\Git\notwork\ExchangeRatesService\Storages\ExchangeRates.Storage\obj\Debug\netcoreapp2.1\ExchangeRates.Storage.pdb
+C:\Git\notwork\ExchangeRatesService\Storages\ExchangeRates.Storage\bin\Debug\netcoreapp2.1\System.Net.Http.Formatting.dll
+C:\Git\notwork\ExchangeRatesService\Storages\ExchangeRates.Storage\bin\Debug\netcoreapp2.1\System.Net.Http.Formatting.xml

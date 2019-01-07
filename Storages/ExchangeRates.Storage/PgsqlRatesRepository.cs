@@ -51,13 +51,22 @@ namespace ExchangeRates.Storage
         public async Task InsertValuteRateAsync(ValuteRateOnDate valute_rate_on_date)
         {
             TryMakeFail(0.6);
-            await SqlAccess.ExecuteCommandAsync(INSERT_RATE, _connectionString,
-                new[]
-                {
-                    new NpgsqlParameter("@valute_code", DbType.String) {Value = valute_rate_on_date.ValuteCode},
-                    new NpgsqlParameter("@rate_date", DbType.Date) {Value = valute_rate_on_date.RateDate},
-                    new NpgsqlParameter("@rate", DbType.Double) {Value = valute_rate_on_date.Rate}
-                });
+            try
+            {
+                await SqlAccess.ExecuteCommandAsync(INSERT_RATE, _connectionString,
+                    new[]
+                    {
+                        new NpgsqlParameter("@valute_code", DbType.String) {Value = valute_rate_on_date.ValuteCode},
+                        new NpgsqlParameter("@rate_date", DbType.Date) {Value = valute_rate_on_date.RateDate},
+                        new NpgsqlParameter("@rate", DbType.Double) {Value = valute_rate_on_date.Rate}
+                    });
+            }
+            catch (PostgresException e)
+            {
+                // Код ошибки дубликата ключа, значит уже закешировано.
+                if (string.Equals(e.Code, "23505"))
+                    throw new DuplicateNameException();
+            }
         }
 
         /// <summary>
@@ -66,6 +75,9 @@ namespace ExchangeRates.Storage
         /// <param name="success_probability">Вероятность, с которой исключения не будет.</param>
         private static void TryMakeFail(double success_probability)
         {
+            if (success_probability <= 0)
+                throw new ArgumentOutOfRangeException(nameof(success_probability));
+
             byte[] bytes = new byte[8];
             new RNGCryptoServiceProvider().GetBytes(bytes);
             double value = BitConverter.ToDouble(bytes, 0);

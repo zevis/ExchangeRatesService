@@ -12,6 +12,6 @@ namespace ExchangeRates.Interfaces.Storages
         /// </summary>
         /// <param name="rate_date"></param>
         /// <returns>Список курсов валют на дату.</returns>
-        Task<List<ValuteRateOnDate>> GetValuteRatesOnDatesAsync(DateTime rate_date);
+        Task<List<ValuteRateOnDate>> GetValuteRatesOnDatesAsync(string valute_code, DateTime rate_date);
     }
 }

@@ -9,6 +9,6 @@ namespace ExchangeRates.Interfaces.Storages
         /// Добавить данные о курсах валют.
         /// </summary>
         /// <param name="rates">Данные о курсах валют.</param>
-        void AddValuteRatesOnDate(IEnumerable<ValuteRateOnDate> rates);
+        void AddValuteRatesOnDate(List<ValuteRateOnDate> rates);
     }
 }

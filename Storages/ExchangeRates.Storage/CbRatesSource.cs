@@ -30,11 +30,11 @@ namespace ExchangeRates.Storage
         }
 
         /// <inheritdoc />
-        public async Task<List<ValuteRateOnDate>> GetValuteRatesOnDatesAsync(DateTime rate_date)
+        public async Task<List<ValuteRateOnDate>> GetValuteRatesOnDatesAsync(string valute_code, DateTime rate_date)
         {
             XmlSerializer xs = new XmlSerializer(typeof(ValCurs));
             var uri = $@"http://www.cbr.ru/scripts/XML_daily.asp?date_req={rate_date:dd/MM/yyyy}";
-            HttpResponseMessage xml = await new HttpClient().GetAsync(uri);
+            HttpResponseMessage xml = await HttpClientFactory.Create().GetAsync(uri);
 
             XmlReader xr = new XmlTextReader(await xml.Content.ReadAsStreamAsync());
             Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);

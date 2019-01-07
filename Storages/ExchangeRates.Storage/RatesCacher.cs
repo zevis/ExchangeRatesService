@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
+using System.Data;
 using System.Threading;
 using ExchangeRates.Interfaces.Models;
 using ExchangeRates.Interfaces.Storages;
 using ExchangeRates.Interfaces.Storages.Exceptions;
 using NLog;
-using Npgsql;
 
 namespace ExchangeRates.Storage
 {
@@ -31,7 +31,7 @@ namespace ExchangeRates.Storage
         }
 
         /// <inheritdoc />
-        public void AddValuteRatesOnDate(IEnumerable<ValuteRateOnDate> valute_rates)
+        public void AddValuteRatesOnDate(List<ValuteRateOnDate> valute_rates)
         {
             foreach (var valute_rate_on_date in valute_rates)
                 _tasksToConsume.Enqueue(valute_rate_on_date);
@@ -56,13 +56,8 @@ namespace ExchangeRates.Storage
                     {
                         _tasksToConsume.Enqueue(task);
                     }
-                    catch (PostgresException e)
+                    catch (DuplicateNameException e)
                     {
-                        // Код ошибки дубликата ключа, значит уже закешировано.
-                        if (string.Equals(e.Code, "23505"))
-                            continue;
-
-                        _logger.Error(e.Message);
                     }
                     catch (Exception e)
                     {

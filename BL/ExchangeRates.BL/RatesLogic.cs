@@ -55,10 +55,8 @@ namespace ExchangeRates.BL
             List<ValuteRateOnDate> rates;
             try
             {
-                rates = await _ratesSource.GetValuteRatesOnDatesAsync((DateTime) rate_date);
-                if (rate_date.Value.Date != DateTime.Now.Date)
-                    _ratesCacher.AddValuteRatesOnDate(rates);
-
+                rates = await _ratesSource.GetValuteRatesOnDatesAsync(valute_code, (DateTime) rate_date);
+                _ratesCacher.AddValuteRatesOnDate(rates);
             }
             catch (Exception e)
             {
@@ -66,7 +64,8 @@ namespace ExchangeRates.BL
                 throw new Exception(Resources.CbLogicFail);
             }
 
-            ValuteRateOnDate valute_rate = rates.FirstOrDefault(x => string.Equals(valute_code, x.ValuteCode));
+            ValuteRateOnDate valute_rate = rates.FirstOrDefault(x =>
+                string.Equals(valute_code, x.ValuteCode) && x.RateDate.Date.Equals(rate_date.Value.Date));
             if (valute_rate == null)
                 throw new NotFoundException(string.Format(Resources.ExchangeRateNotFound, valute_code, rate_date));
 

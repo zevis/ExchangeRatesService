@@ -19,3 +19,24 @@ C:\Users\vszenin.MAINDOMAIN\Documents\Visual Studio 2017\Projects2\ExchangeRates
 C:\Users\vszenin.MAINDOMAIN\Documents\Visual Studio 2017\Projects2\ExchangeRatesService\Services\ExchangeRates.Service\obj\Debug\netcoreapp2.1\ExchangeRates.Service.csproj.CopyComplete
 C:\Users\vszenin.MAINDOMAIN\Documents\Visual Studio 2017\Projects2\ExchangeRatesService\Services\ExchangeRates.Service\obj\Debug\netcoreapp2.1\ExchangeRates.Service.dll
 C:\Users\vszenin.MAINDOMAIN\Documents\Visual Studio 2017\Projects2\ExchangeRatesService\Services\ExchangeRates.Service\obj\Debug\netcoreapp2.1\ExchangeRates.Service.pdb
+C:\Git\notwork\ExchangeRatesService\Services\ExchangeRates.Service\bin\Debug\netcoreapp2.1\ExchangeRates.Service.deps.json
+C:\Git\notwork\ExchangeRatesService\Services\ExchangeRates.Service\bin\Debug\netcoreapp2.1\ExchangeRates.Service.runtimeconfig.json
+C:\Git\notwork\ExchangeRatesService\Services\ExchangeRates.Service\bin\Debug\netcoreapp2.1\ExchangeRates.Service.runtimeconfig.dev.json
+C:\Git\notwork\ExchangeRatesService\Services\ExchangeRates.Service\bin\Debug\netcoreapp2.1\ExchangeRates.Service.dll
+C:\Git\notwork\ExchangeRatesService\Services\ExchangeRates.Service\bin\Debug\netcoreapp2.1\ExchangeRates.Service.pdb
+C:\Git\notwork\ExchangeRatesService\Services\ExchangeRates.Service\bin\Debug\netcoreapp2.1\ExchangeRates.BL.dll
+C:\Git\notwork\ExchangeRatesService\Services\ExchangeRates.Service\bin\Debug\netcoreapp2.1\ExchangeRates.Interfaces.dll
+C:\Git\notwork\ExchangeRatesService\Services\ExchangeRates.Service\bin\Debug\netcoreapp2.1\ExchangeRates.Storage.dll
+C:\Git\notwork\ExchangeRatesService\Services\ExchangeRates.Service\bin\Debug\netcoreapp2.1\ExchangeRates.BL.pdb
+C:\Git\notwork\ExchangeRatesService\Services\ExchangeRates.Service\bin\Debug\netcoreapp2.1\ExchangeRates.Storage.pdb
+C:\Git\notwork\ExchangeRatesService\Services\ExchangeRates.Service\bin\Debug\netcoreapp2.1\ExchangeRates.Interfaces.pdb
+C:\Git\notwork\ExchangeRatesService\Services\ExchangeRates.Service\obj\Debug\netcoreapp2.1\ExchangeRates.Service.csprojAssemblyReference.cache
+C:\Git\notwork\ExchangeRatesService\Services\ExchangeRates.Service\obj\Debug\netcoreapp2.1\ExchangeRates.Service.csproj.CoreCompileInputs.cache
+C:\Git\notwork\ExchangeRatesService\Services\ExchangeRates.Service\obj\Debug\netcoreapp2.1\ExchangeRates.Service.RazorAssemblyInfo.cache
+C:\Git\notwork\ExchangeRatesService\Services\ExchangeRates.Service\obj\Debug\netcoreapp2.1\ExchangeRates.Service.RazorAssemblyInfo.cs
+C:\Git\notwork\ExchangeRatesService\Services\ExchangeRates.Service\obj\Debug\netcoreapp2.1\ExchangeRates.Service.AssemblyInfoInputs.cache
+C:\Git\notwork\ExchangeRatesService\Services\ExchangeRates.Service\obj\Debug\netcoreapp2.1\ExchangeRates.Service.AssemblyInfo.cs
+C:\Git\notwork\ExchangeRatesService\Services\ExchangeRates.Service\obj\Debug\netcoreapp2.1\ExchangeRates.Service.RazorTargetAssemblyInfo.cache
+C:\Git\notwork\ExchangeRatesService\Services\ExchangeRates.Service\obj\Debug\netcoreapp2.1\ExchangeRates.Service.csproj.CopyComplete
+C:\Git\notwork\ExchangeRatesService\Services\ExchangeRates.Service\obj\Debug\netcoreapp2.1\ExchangeRates.Service.dll
+C:\Git\notwork\ExchangeRatesService\Services\ExchangeRates.Service\obj\Debug\netcoreapp2.1\ExchangeRates.Service.pdb

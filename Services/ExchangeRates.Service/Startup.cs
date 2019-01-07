@@ -72,8 +72,8 @@ namespace ExchangeRates.Service
 
             _container.Register<IRatesRepository, PgsqlRatesRepository>(Lifestyle.Singleton);
             _container.Register<IRatesLogic, RatesLogic>(Lifestyle.Transient);
-            _container.Register<IRatesCacher, RatesCacher>(Lifestyle.Singleton);
-            _container.Register<IRatesSource, CbRatesSource>(Lifestyle.Transient);
+            _container.Register<IRatesCacher, SimpleRatesCacher>(Lifestyle.Singleton);
+            _container.Register<IRatesSource, AlphaVantageRatesSource>(Lifestyle.Transient);
             _container.Register<IConfigurationRoot>(() => new ConfigurationBuilder()
                 .SetBasePath(Directory.GetCurrentDirectory())
                 .AddJsonFile("appsettings.json").Build(), Lifestyle.Singleton);

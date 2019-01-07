@@ -915,10 +915,11 @@
       ]
     },
     "Newtonsoft.Json/11.0.2": {
-      "sha512": "IvJe1pj7JHEsP8B8J8DwlMEx8UInrs/x+9oVY+oCD13jpLu4JbJU2WCIsMRn5C4yW9+DgkaO8uiVE5VHKjpmdQ==",
+      "sha512": "znZGbws7E4BA9jxNZ7FuiIRI3C9hrgatVQSTKhIYZYNOud4M5VfGlTYi6RdYO5sQrebFuF/g9UEV3hOxDMXF6Q==",
       "type": "package",
       "path": "newtonsoft.json/11.0.2",
       "files": [
+        ".signature.p7s",
         "LICENSE.md",
         "lib/net20/Newtonsoft.Json.dll",
         "lib/net20/Newtonsoft.Json.xml",
@@ -943,10 +944,11 @@
       ]
     },
     "NLog/4.5.8": {
-      "sha512": "t0NJVxerdU9QYgQQLa4XA3v1eLDBnJ5MF7AyoMxmJu38iAzrB4hVZYcCH3j0tKFKm7fOIx5jNbnAd9GD4mRTEA==",
+      "sha512": "8MzV81cLzeg4oIR04GvRa9YdaKHuvF+mPPwNHBs0hsSOkhFdVg2jsRU+vUZJ5Z693dBHZrxjjr0f/il1Nrioww==",
       "type": "package",
       "path": "nlog/4.5.8",
       "files": [
+        ".signature.p7s",
         "lib/monoandroid44/NLog.dll",
         "lib/monoandroid44/NLog.xml",
         "lib/net35/NLog.dll",
@@ -1036,23 +1038,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\vszenin.MAINDOMAIN\\.nuget\\packages\\": {},
+    "C:\\Users\\vszenin\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\vszenin.MAINDOMAIN\\Documents\\Visual Studio 2017\\Projects2\\ExchangeRatesService\\BL\\ExchangeRates.BL\\ExchangeRates.BL.csproj",
+      "projectUniqueName": "C:\\Git\\notwork\\ExchangeRatesService\\BL\\ExchangeRates.BL\\ExchangeRates.BL.csproj",
       "projectName": "ExchangeRates.BL",
-      "projectPath": "C:\\Users\\vszenin.MAINDOMAIN\\Documents\\Visual Studio 2017\\Projects2\\ExchangeRatesService\\BL\\ExchangeRates.BL\\ExchangeRates.BL.csproj",
-      "packagesPath": "C:\\Users\\vszenin.MAINDOMAIN\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\vszenin.MAINDOMAIN\\Documents\\Visual Studio 2017\\Projects2\\ExchangeRatesService\\BL\\ExchangeRates.BL\\obj\\",
+      "projectPath": "C:\\Git\\notwork\\ExchangeRatesService\\BL\\ExchangeRates.BL\\ExchangeRates.BL.csproj",
+      "packagesPath": "C:\\Users\\vszenin\\.nuget\\packages\\",
+      "outputPath": "C:\\Git\\notwork\\ExchangeRatesService\\BL\\ExchangeRates.BL\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\vszenin.MAINDOMAIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\vszenin\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1065,8 +1067,8 @@
       "frameworks": {
         "netcoreapp2.1": {
           "projectReferences": {
-            "C:\\Users\\vszenin.MAINDOMAIN\\Documents\\Visual Studio 2017\\Projects2\\ExchangeRatesService\\Interfaces\\ExchangeRates.Interfaces\\ExchangeRates.Interfaces.csproj": {
-              "projectPath": "C:\\Users\\vszenin.MAINDOMAIN\\Documents\\Visual Studio 2017\\Projects2\\ExchangeRatesService\\Interfaces\\ExchangeRates.Interfaces\\ExchangeRates.Interfaces.csproj"
+            "C:\\Git\\notwork\\ExchangeRatesService\\Interfaces\\ExchangeRates.Interfaces\\ExchangeRates.Interfaces.csproj": {
+              "projectPath": "C:\\Git\\notwork\\ExchangeRatesService\\Interfaces\\ExchangeRates.Interfaces\\ExchangeRates.Interfaces.csproj"
             }
           }
         }

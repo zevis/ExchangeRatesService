@@ -7,3 +7,12 @@ C:\Users\vszenin.MAINDOMAIN\Documents\Visual Studio 2017\Projects2\ExchangeRates
 C:\Users\vszenin.MAINDOMAIN\Documents\Visual Studio 2017\Projects2\ExchangeRatesService\Interfaces\ExchangeRates.Interfaces\obj\Debug\netcoreapp2.1\ExchangeRates.Interfaces.dll
 C:\Users\vszenin.MAINDOMAIN\Documents\Visual Studio 2017\Projects2\ExchangeRatesService\Interfaces\ExchangeRates.Interfaces\obj\Debug\netcoreapp2.1\ExchangeRates.Interfaces.pdb
 C:\Users\vszenin.MAINDOMAIN\Documents\Visual Studio 2017\Projects2\ExchangeRatesService\Interfaces\ExchangeRates.Interfaces\obj\Debug\netcoreapp2.1\ExchangeRates.Interfaces.csprojAssemblyReference.cache
+C:\Git\notwork\ExchangeRatesService\Interfaces\ExchangeRates.Interfaces\bin\Debug\netcoreapp2.1\ExchangeRates.Interfaces.deps.json
+C:\Git\notwork\ExchangeRatesService\Interfaces\ExchangeRates.Interfaces\bin\Debug\netcoreapp2.1\ExchangeRates.Interfaces.dll
+C:\Git\notwork\ExchangeRatesService\Interfaces\ExchangeRates.Interfaces\bin\Debug\netcoreapp2.1\ExchangeRates.Interfaces.pdb
+C:\Git\notwork\ExchangeRatesService\Interfaces\ExchangeRates.Interfaces\obj\Debug\netcoreapp2.1\ExchangeRates.Interfaces.csprojAssemblyReference.cache
+C:\Git\notwork\ExchangeRatesService\Interfaces\ExchangeRates.Interfaces\obj\Debug\netcoreapp2.1\ExchangeRates.Interfaces.csproj.CoreCompileInputs.cache
+C:\Git\notwork\ExchangeRatesService\Interfaces\ExchangeRates.Interfaces\obj\Debug\netcoreapp2.1\ExchangeRates.Interfaces.AssemblyInfoInputs.cache
+C:\Git\notwork\ExchangeRatesService\Interfaces\ExchangeRates.Interfaces\obj\Debug\netcoreapp2.1\ExchangeRates.Interfaces.AssemblyInfo.cs
+C:\Git\notwork\ExchangeRatesService\Interfaces\ExchangeRates.Interfaces\obj\Debug\netcoreapp2.1\ExchangeRates.Interfaces.dll
+C:\Git\notwork\ExchangeRatesService\Interfaces\ExchangeRates.Interfaces\obj\Debug\netcoreapp2.1\ExchangeRates.Interfaces.pdb
