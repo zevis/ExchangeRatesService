@@ -18,12 +18,12 @@ namespace ExchangeRates.Storage
         /// <summary>
         /// Запрос вставки курса валюты на дату.
         /// </summary>
-        private const string INSERT_RATE = "INSERT INTO public.\"Valute\"(\"Name\", \"Date\", \"Rate\") VALUES (@valute_code, @rate_date, @rate);";
+        private const string INSERT_RATE = "INSERT INTO public.\"Currency\"(\"Name\", \"Date\", \"Rate\") VALUES (@currency_code, @rate_date, @rate);";
 
         /// <summary>
         /// Запрос выбора курса валюты на заданную дату.
         /// </summary>
-        private const string SELECT_RATE = "SELECT \"Rate\" FROM public.\"Valute\" WHERE \"Name\" = @valute_code AND \"Date\" = @rate_date";
+        private const string SELECT_RATE = "SELECT \"Rate\" FROM public.\"Currency\" WHERE \"Name\" = @currency_code AND \"Date\" = @rate_date";
 
         /// <summary>
         /// Строка подключения к бд.
@@ -36,19 +36,19 @@ namespace ExchangeRates.Storage
         }
 
         /// <inheritdoc />
-        public async Task<double?> SelectValuteRateAsync(string valute_code, DateTime rate_date)
+        public async Task<double?> SelectCurrencyRateAsync(string currency_code, DateTime rate_date)
         {
             object rate_result = await SqlAccess.ExecuteScalarCommandAsync(SELECT_RATE, _connectionString,
                 new[]
                 {
-                    new NpgsqlParameter("@valute_code", DbType.String) {Value = valute_code},
+                    new NpgsqlParameter("@currency_code", DbType.String) {Value = currency_code},
                     new NpgsqlParameter("@rate_date", DbType.Date) {Value = rate_date}
                 });
             return rate_result as double?;
         }
 
         /// <inheritdoc />
-        public async Task InsertValuteRateAsync(ValuteRateOnDate valute_rate_on_date)
+        public async Task InsertCurrencyRateAsync(CurrencyRateOnDate currency_rate_on_date)
         {
             TryMakeFail(0.6);
             try
@@ -56,15 +56,15 @@ namespace ExchangeRates.Storage
                 await SqlAccess.ExecuteCommandAsync(INSERT_RATE, _connectionString,
                     new[]
                     {
-                        new NpgsqlParameter("@valute_code", DbType.String) {Value = valute_rate_on_date.ValuteCode},
-                        new NpgsqlParameter("@rate_date", DbType.Date) {Value = valute_rate_on_date.RateDate},
-                        new NpgsqlParameter("@rate", DbType.Double) {Value = valute_rate_on_date.Rate}
+                        new NpgsqlParameter("@currency_code", DbType.String) {Value = currency_rate_on_date.CurrencyCode},
+                        new NpgsqlParameter("@rate_date", DbType.Date) {Value = currency_rate_on_date.RateDate},
+                        new NpgsqlParameter("@rate", DbType.Double) {Value = currency_rate_on_date.Rate}
                     });
             }
             catch (PostgresException e)
             {
                 // Код ошибки дубликата ключа, значит уже закешировано.
-                if (string.Equals(e.Code, "23505"))
+                if (string.Equals(e.SqlState, "23505"))
                     throw new DuplicateNameException();
             }
         }
@@ -80,7 +80,7 @@ namespace ExchangeRates.Storage
 
             byte[] bytes = new byte[8];
             new RNGCryptoServiceProvider().GetBytes(bytes);
-            double value = BitConverter.ToDouble(bytes, 0);
+            double value = Math.Abs(BitConverter.ToDouble(bytes, 0)) / double.MaxValue;
             if (value > success_probability)
                 throw new CustomFailException();
         }

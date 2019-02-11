@@ -13,33 +13,35 @@ namespace ExchangeRates.Storage
 {
     public class CbRatesSource : IRatesSource
     {
-        public class ValCurs
+#pragma warning disable 649
+        private class CurrencyRates
         {
-            [XmlElement("Valute")]
-            public ValCursValute[] ValuteList;
+            [XmlElement("Currency")]
+            public CurrencyRate[] CurrencyList;
         }
 
-        public class ValCursValute
+        private class CurrencyRate
         {
 
             [XmlElement("CharCode")]
-            public string ValuteCode;
+            public string CurrencyCode;
 
             [XmlElement("Value")]
             public string Rate;
         }
+#pragma warning restore 649
 
         /// <inheritdoc />
-        public async Task<List<ValuteRateOnDate>> GetValuteRatesOnDatesAsync(string valute_code, DateTime rate_date)
+        public async Task<List<CurrencyRateOnDate>> GetCurrencyRatesOnDatesAsync(string currency_code, DateTime rate_date)
         {
-            XmlSerializer xs = new XmlSerializer(typeof(ValCurs));
+            XmlSerializer xs = new XmlSerializer(typeof(CurrencyRates));
             var uri = $@"http://www.cbr.ru/scripts/XML_daily.asp?date_req={rate_date:dd/MM/yyyy}";
             HttpResponseMessage xml = await HttpClientFactory.Create().GetAsync(uri);
 
             XmlReader xr = new XmlTextReader(await xml.Content.ReadAsStreamAsync());
             Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
-            return ((ValCurs) xs.Deserialize(xr)).ValuteList.Select(valute =>
-                new ValuteRateOnDate(valute.ValuteCode, rate_date, Convert.ToDouble(valute.Rate))).ToList();
+            return ((CurrencyRates) xs.Deserialize(xr)).CurrencyList.Select(currency =>
+                new CurrencyRateOnDate(currency.CurrencyCode, rate_date, Convert.ToDouble(currency.Rate))).ToList();
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System.IO;
+﻿using System;
+using System.IO;
 using ExchangeRates.BL;
 using ExchangeRates.Interfaces.BL;
 using ExchangeRates.Interfaces.Storages;
@@ -17,16 +18,9 @@ using SimpleInjector.Lifestyles;
 
 namespace ExchangeRates.Service
 {
-    public class Startup
+    public class Startup : IDisposable
     {
         private readonly Container _container = new Container();
-
-        public Startup(IConfiguration configuration)
-        {
-            Configuration = configuration;
-        }
-
-        public IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
@@ -72,14 +66,19 @@ namespace ExchangeRates.Service
 
             _container.Register<IRatesRepository, PgsqlRatesRepository>(Lifestyle.Singleton);
             _container.Register<IRatesLogic, RatesLogic>(Lifestyle.Transient);
-            _container.Register<IRatesCacher, SimpleRatesCacher>(Lifestyle.Singleton);
+            _container.Register<IRatesCache, SimpleRatesCache>(Lifestyle.Singleton);
             _container.Register<IRatesSource, AlphaVantageRatesSource>(Lifestyle.Transient);
-            _container.Register<IConfigurationRoot>(() => new ConfigurationBuilder()
+            _container.Register(() => new ConfigurationBuilder()
                 .SetBasePath(Directory.GetCurrentDirectory())
                 .AddJsonFile("appsettings.json").Build(), Lifestyle.Singleton);
-            _container.Register<Logger>(LogManager.GetCurrentClassLogger, Lifestyle.Singleton);
+            _container.Register(LogManager.GetCurrentClassLogger, Lifestyle.Singleton);
 
             _container.AutoCrossWireAspNetComponents(app);
+        }
+
+        public void Dispose()
+        {
+            _container?.Dispose();
         }
     }
 }

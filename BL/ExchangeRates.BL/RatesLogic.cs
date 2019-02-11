@@ -19,31 +19,31 @@ namespace ExchangeRates.BL
         private readonly Logger _logger;
         private readonly IRatesRepository _ratesStorage;
         private readonly IRatesSource _ratesSource;
-        private readonly IRatesCacher _ratesCacher;
+        private readonly IRatesCache _ratesCache;
 
         public RatesLogic(Logger logger, IRatesRepository rates_storage, IRatesSource rates_source,
-            IRatesCacher rates_cacher)
+            IRatesCache rates_cache)
         {
             _logger = logger;
             _ratesStorage = rates_storage;
             _ratesSource = rates_source;
-            _ratesCacher = rates_cacher;
+            _ratesCache = rates_cache;
         }
 
         /// <inheritdoc />
-        public async Task<double> GetRateOnDateAsync(string valute_code, DateTime? rate_date)
+        public async Task<double> GetRateOnDateAsync(string currency_code, DateTime? rate_date)
         {
-            if (string.IsNullOrEmpty(valute_code))
-                throw new BadRequestException(Resources.NotValuteCodeError);
+            if (string.IsNullOrEmpty(currency_code))
+                throw new BadRequestException(Resources.NotCurrencyCodeError);
 
             rate_date = rate_date ?? DateTime.Now;
             if (rate_date.Value.Date > DateTime.Now.Date)
                 throw new BadRequestException(Resources.FutureDateError);
 
-            // Исхожу из того, что курсы не изменяется, никакой инвалидации не делалось.
+            // Исхожу из того, что курсы не изменяются, никакой инвалидации не делалось.
             try
             {
-                double? rate = await _ratesStorage.SelectValuteRateAsync(valute_code, (DateTime) rate_date);
+                double? rate = await _ratesStorage.SelectCurrencyRateAsync(currency_code, (DateTime) rate_date);
                 if (rate != null)
                     return (double) rate;
             }
@@ -52,11 +52,11 @@ namespace ExchangeRates.BL
                 _logger.Debug(e.Message);
             }
 
-            List<ValuteRateOnDate> rates;
+            List<CurrencyRateOnDate> rates;
             try
             {
-                rates = await _ratesSource.GetValuteRatesOnDatesAsync(valute_code, (DateTime) rate_date);
-                _ratesCacher.AddValuteRatesOnDate(rates);
+                rates = await _ratesSource.GetCurrencyRatesOnDatesAsync(currency_code, (DateTime) rate_date);
+                _ratesCache.AddCurrencyRatesOnDate(rates);
             }
             catch (Exception e)
             {
@@ -64,12 +64,12 @@ namespace ExchangeRates.BL
                 throw new Exception(Resources.CbLogicFail);
             }
 
-            ValuteRateOnDate valute_rate = rates.FirstOrDefault(x =>
-                string.Equals(valute_code, x.ValuteCode) && x.RateDate.Date.Equals(rate_date.Value.Date));
-            if (valute_rate == null)
-                throw new NotFoundException(string.Format(Resources.ExchangeRateNotFound, valute_code, rate_date));
+            CurrencyRateOnDate currency_rate = rates.FirstOrDefault(x =>
+                string.Equals(currency_code, x.CurrencyCode) && x.RateDate.Date.Equals(rate_date.Value.Date));
+            if (currency_rate == null)
+                throw new NotFoundException(string.Format(Resources.ExchangeRateNotFound, currency_code, rate_date));
 
-            return valute_rate.Rate;
+            return currency_rate.Rate;
         }
     }
 }

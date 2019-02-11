@@ -9,23 +9,23 @@ namespace ExchangeRates.Service.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class ValutesController : ControllerBase
+    public class CurrencyController : ControllerBase
     {
         private readonly Logger _logger;
         private readonly IRatesLogic _ratesLogic;
 
-        public ValutesController(Logger logger, IRatesLogic rates_logic)
+        public CurrencyController(Logger logger, IRatesLogic rates_logic)
         {
             _logger = logger;
             _ratesLogic = rates_logic;
         }
 
         [HttpGet]
-        public async Task<IActionResult> Get([FromQuery] DateTime? on_date, [FromQuery] string valute_code)
+        public async Task<IActionResult> Get([FromQuery] DateTime? on_date, [FromQuery] string currency_code)
         {
             try
             {
-                return Ok(await _ratesLogic.GetRateOnDateAsync(valute_code, on_date));
+                return Ok(await _ratesLogic.GetRateOnDateAsync(currency_code, on_date));
             }
             catch (BadRequestException bad_request)
             {

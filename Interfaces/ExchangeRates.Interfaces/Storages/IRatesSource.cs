@@ -10,8 +10,9 @@ namespace ExchangeRates.Interfaces.Storages
         /// <summary>
         /// Получить список курсов валют на дату.
         /// </summary>
+        /// <param name="currency_code">Код валюты.</param>
         /// <param name="rate_date"></param>
         /// <returns>Список курсов валют на дату.</returns>
-        Task<List<ValuteRateOnDate>> GetValuteRatesOnDatesAsync(string valute_code, DateTime rate_date);
+        Task<List<CurrencyRateOnDate>> GetCurrencyRatesOnDatesAsync(string currency_code, DateTime rate_date);
     }
 }

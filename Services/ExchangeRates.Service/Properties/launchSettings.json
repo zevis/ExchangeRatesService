@@ -12,7 +12,7 @@
     "IIS Express": {
       "commandName": "IISExpress",
       "launchBrowser": true,
-      "launchUrl": "api/valutes?on_date=06.06.2018&valute_code=AUD",
+      "launchUrl": "api/currency?on_date=06.06.2018&currency_code=AUD",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }

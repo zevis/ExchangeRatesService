@@ -2,13 +2,13 @@
 
 namespace ExchangeRates.Interfaces.Models
 {
-    public class ValuteRateOnDate
+    public class CurrencyRateOnDate
     {
         /// <summary>
         /// Закодированное строковое обозначение валюты<para/>
         /// Например: USD, EUR, AUD и т.д.
         /// </summary>
-        public string ValuteCode { get; }
+        public string CurrencyCode { get; }
 
         /// <summary>
         /// Дата курса валюты.
@@ -20,13 +20,13 @@ namespace ExchangeRates.Interfaces.Models
         /// </summary>
         public double Rate { get; }
 
-        /// <param name="valute_code">Закодированное строковое обозначение валюты<para/> 
+        /// <param name="currency_code">Закодированное строковое обозначение валюты<para/> 
         /// Например: USD, EUR, AUD и т.д.</param>
         /// <param name="rate_date">Дата курса валюты.</param>
         /// <param name="rate">Обменный курс.</param>
-        public ValuteRateOnDate(string valute_code, DateTime rate_date, double rate)
+        public CurrencyRateOnDate(string currency_code, DateTime rate_date, double rate)
         {
-            ValuteCode = valute_code;
+            CurrencyCode = currency_code;
             RateDate = rate_date;
             Rate = rate;
         }

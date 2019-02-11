@@ -3,11 +3,14 @@ using Microsoft.AspNetCore.Hosting;
 
 namespace ExchangeRates.Service
 {
-    public class Program
+    public static class Program
     {
         public static void Main(string[] args)
         {
-            CreateWebHostBuilder(args).Build().Run();
+            using (var web_host = CreateWebHostBuilder(args).Build())
+            {
+                web_host.Run();
+            }
         }
 
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>

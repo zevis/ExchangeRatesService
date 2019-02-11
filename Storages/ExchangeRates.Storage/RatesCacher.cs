@@ -13,16 +13,16 @@ namespace ExchangeRates.Storage
     /// <summary>
     /// Консьюмер, отвечает за последовательную вставку курсов валют в бд, в отдельном потоке, чтобы не тормозить ответ пользователю.
     /// </summary>
-    public class RatesCacher : IRatesCacher, IDisposable
+    public class RatesCache : IRatesCache, IDisposable
     {
         private readonly Logger _logger;
         private readonly IRatesRepository _ratesStorage;
         private readonly Thread _threadConsumer;
-        private readonly ConcurrentQueue<ValuteRateOnDate> _tasksToConsume = new ConcurrentQueue<ValuteRateOnDate>();
+        private readonly ConcurrentQueue<CurrencyRateOnDate> _tasksToConsume = new ConcurrentQueue<CurrencyRateOnDate>();
         private readonly AutoResetEvent _taskAddedEvent = new AutoResetEvent(false);
         private readonly CancellationTokenSource _cancellationTokenSource = new CancellationTokenSource();
 
-        public RatesCacher(Logger logger, IRatesRepository rates_storage)
+        public RatesCache(Logger logger, IRatesRepository rates_storage)
         {
             _logger = logger;
             _ratesStorage = rates_storage;
@@ -31,10 +31,10 @@ namespace ExchangeRates.Storage
         }
 
         /// <inheritdoc />
-        public void AddValuteRatesOnDate(List<ValuteRateOnDate> valute_rates)
+        public void AddCurrencyRatesOnDate(List<CurrencyRateOnDate> currency_rates)
         {
-            foreach (var valute_rate_on_date in valute_rates)
-                _tasksToConsume.Enqueue(valute_rate_on_date);
+            foreach (var currency_rate_on_date in currency_rates)
+                _tasksToConsume.Enqueue(currency_rate_on_date);
 
             _taskAddedEvent.Set();
         }
@@ -46,17 +46,17 @@ namespace ExchangeRates.Storage
         {
             while (!_cancellationTokenSource.IsCancellationRequested)
             {
-                while (_tasksToConsume.TryDequeue(out ValuteRateOnDate task))
+                while (_tasksToConsume.TryDequeue(out CurrencyRateOnDate task))
                 {
                     try
                     {
-                        await _ratesStorage.InsertValuteRateAsync(task);
+                        await _ratesStorage.InsertCurrencyRateAsync(task);
                     }
-                    catch (CustomFailException fail_exception)
+                    catch (CustomFailException)
                     {
                         _tasksToConsume.Enqueue(task);
                     }
-                    catch (DuplicateNameException e)
+                    catch (DuplicateNameException)
                     {
                     }
                     catch (Exception e)

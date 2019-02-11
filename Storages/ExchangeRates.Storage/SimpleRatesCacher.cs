@@ -11,30 +11,29 @@ using NLog;
 
 namespace ExchangeRates.Storage
 {
-    public class SimpleRatesCacher : IRatesCacher, IDisposable
+    public class SimpleRatesCache : IRatesCache, IDisposable
     {
         private readonly Logger _logger;
         private readonly IRatesRepository _ratesStorage;
-        private readonly Thread _threadConsumer;
         private readonly CancellationTokenSource _cancellationTokenSource = new CancellationTokenSource();
 
-        public SimpleRatesCacher(Logger logger, IRatesRepository rates_storage)
+        public SimpleRatesCache(Logger logger, IRatesRepository rates_storage)
         {
             _logger = logger;
             _ratesStorage = rates_storage;
         }
 
         /// <inheritdoc />
-        public void AddValuteRatesOnDate(List<ValuteRateOnDate> valute_rates)
+        public void AddCurrencyRatesOnDate(List<CurrencyRateOnDate> currency_rates)
         {
             Task.Factory.StartNew(async () =>
             {
-                foreach (var rate in valute_rates)
+                foreach (var rate in currency_rates)
                 {
                     if (_cancellationTokenSource.IsCancellationRequested)
                         return;
                     
-                    await _ratesStorage.InsertValuteRateAsync(rate).ContinueWith(task =>
+                    await _ratesStorage.InsertCurrencyRateAsync(rate).ContinueWith(task =>
                     {
                         if (task.Status != TaskStatus.Faulted)
                             return;
@@ -43,13 +42,9 @@ namespace ExchangeRates.Storage
                             return;
 
                         if (task.Exception.InnerExceptions.Any(ex => ex.InnerException is CustomFailException))
-                        {
-                            AddValuteRatesOnDate(new List<ValuteRateOnDate> {rate});
-                        }
+                            AddCurrencyRatesOnDate(new List<CurrencyRateOnDate> {rate});
                         else
-                        {
                             _logger.Error(task.Exception);
-                        }
                     });
                 }
             }, _cancellationTokenSource.Token, TaskCreationOptions.LongRunning, TaskScheduler.Default);
@@ -58,7 +53,6 @@ namespace ExchangeRates.Storage
         public void Dispose()
         {
             _cancellationTokenSource?.Dispose();
-            _threadConsumer.Join();
         }
     }
 }

@@ -70,7 +70,7 @@ namespace ExchangeRates.BL.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Valute {0} exchange rate not found on date {1}.
+        ///   Looks up a localized string similar to Currency {0} exchange rate not found on date {1}.
         /// </summary>
         internal static string ExchangeRateNotFound {
             get {
@@ -88,11 +88,11 @@ namespace ExchangeRates.BL.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Please add valute code for request..
+        ///   Looks up a localized string similar to Please add currency code for request..
         /// </summary>
-        internal static string NotValuteCodeError {
+        internal static string NotCurrencyCodeError {
             get {
-                return ResourceManager.GetString("NotValuteCodeError", resourceCulture);
+                return ResourceManager.GetString("NotCurrencyCodeError", resourceCulture);
             }
         }
     }
